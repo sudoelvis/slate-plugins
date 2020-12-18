@@ -101,10 +101,11 @@ export const EditablePlugins = ({
         fontSize: 16,
         lineHeight: 1.5,
       }}
-      decorate={useCallback(decoratePlugins(editor, plugins, decorateList), [
+      decorate={decorate}
+      /*decorate={useCallback(decoratePlugins(editor, plugins, decorateList), [
         editor,
         ...[...plugins.flatMap((p) => p.decorateDeps ?? []), ...decorateDeps],
-      ])}
+      ])}*/
       renderElement={useCallback(
         renderElementPlugins(plugins, renderElementList),
         [
